@@ -11,6 +11,9 @@ class Item(BaseModel):
     price:float
     on_offer:bool
 
+    class Config:
+        orm_mode=True
+
 @app.get('/')
 def index():
     return {"message":"Hello world"}
